@@ -1,0 +1,6 @@
+model_checkpoint_path: "GAN.model-10899"
+all_model_checkpoint_paths: "GAN.model-8299"
+all_model_checkpoint_paths: "GAN.model-8799"
+all_model_checkpoint_paths: "GAN.model-9499"
+all_model_checkpoint_paths: "GAN.model-9999"
+all_model_checkpoint_paths: "GAN.model-10899"
