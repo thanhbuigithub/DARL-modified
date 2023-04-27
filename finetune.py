@@ -6,12 +6,12 @@ import numpy as np
 import tensorflow as tf
 import random
 import time
-import makedata_digit_gray as makedata
+import makedata
 #from skimage import transform
 from six.moves import xrange
 from GAN_dann_gray import GAN_Net
 import logging
-import tensorflow.examples.tutorials.mnist.input_data as input_data
+# import tensorflow.examples.tutorials.mnist.input_data as input_data
 #from tqdm import tqdm
 #from DQN import DQN_Net
 #from glob import glob
@@ -20,9 +20,9 @@ import tensorflow.examples.tutorials.mnist.input_data as input_data
 
 parser = argparse.ArgumentParser(description='')
 
-parser.add_argument('--Dataset_name_source', dest='Dataset_name_source', default='U10')
+parser.add_argument('--Dataset_name_source', dest='Dataset_name_source', default='S10')
 parser.add_argument('--Dataset_name_target', dest='Dataset_name_target', default='M5')
-parser.add_argument('--source_list', dest='source_list', default='./data_list/U10_list.txt')
+parser.add_argument('--source_list', dest='source_list', default='./data_list/S10_list.txt')
 #parser.add_argument('--source_test_list', dest='source_test_list', default='./data_list_crop/Ar_65_list.txt')
 parser.add_argument('--target_list', dest='target_list', default='./data_list/M5_list.txt')
 #parser.add_argument('--target_test_list', dest='target_test_list', default='./data_list_crop/Pr_25_list.txt')
@@ -37,7 +37,7 @@ parser.add_argument('--category_num', dest='category_num', type=int, default=10)
 #    '/home/mcislab/chenjin/data')
 parser.add_argument('--epoch', dest='epoch', type=int, default=100000, help='# of epoch')
 parser.add_argument('--batch_size', dest='batch_size', type=int, default=128, help='# batchsize of GAN')
-parser.add_argument('--feature_dim', dest='feature_dim', type=int, default=84)
+parser.add_argument('--feature_dim', dest='feature_dim', type=int, default=64)
 #parser.add_argument('--save_iter_gan', dest='save_iter_gan', type=int, default=50,help='save model')
 parser.add_argument('--test_iter', dest='test_iter', type=int, default=100)
 parser.add_argument('--test_iter_s', dest='test_iter_s', type=int, default=100)
